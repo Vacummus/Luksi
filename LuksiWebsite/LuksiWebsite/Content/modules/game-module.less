@@ -1,0 +1,29 @@
+﻿.game-module {
+    .video {
+    }
+
+    .description {
+        text-align: center;
+
+        .item {
+            display: inline-block;
+            font-size: 20px;
+            color: rgb(53, 100, 109);
+
+            .text {
+                max-width: 230px;
+                margin: 0 auto;
+            }
+
+            &.world-collapse {
+                .text {
+                    max-width: 320px;
+                }
+            }
+
+            &.battle .text {
+                max-width: 600px;
+            }
+        }
+    }
+}

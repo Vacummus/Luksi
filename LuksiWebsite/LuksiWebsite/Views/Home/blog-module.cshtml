@@ -1,0 +1,18 @@
+﻿<div class="blog-module" data-ng-controller="blog-controller" data-ng-switch="displayType">
+    <div class="fade-animation" data-ng-switch-when="content">
+        <div data-ng-repeat="post in posts">
+            <div class="post">
+                <h3>{{post.title}}</h3>
+                <div class="body" data-custom-html-bind="post.body"></div>
+                <div class="date" data-ng-bind="post.date"></div>
+            </div>
+        </div>
+    </div>
+    <p class="red-color fade-animation" data-ng-switch-when="error">
+        An error occurred trying to getting the blog posts. Please try again later or visit <a href="http://luksigame.tumblr.com">luksigame.tumblr.com</a> for latest blog posts.
+    </p>
+    <div class="loading-icon fade-animation" data-ng-switch-when="loading">
+        <i class="icon-spinner icon-spin"></i>
+    </div>
+     @*<script type="text/javascript" src="http://luksigame.tumblr.com/js"></script>*@
+</div>

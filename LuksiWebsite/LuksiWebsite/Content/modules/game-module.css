@@ -1,0 +1,18 @@
+﻿.game-module .description {
+  text-align: center;
+}
+.game-module .description .item {
+  display: inline-block;
+  font-size: 20px;
+  color: #35646d;
+}
+.game-module .description .item .text {
+  max-width: 230px;
+  margin: 0 auto;
+}
+.game-module .description .item.world-collapse .text {
+  max-width: 320px;
+}
+.game-module .description .item.battle .text {
+  max-width: 600px;
+}

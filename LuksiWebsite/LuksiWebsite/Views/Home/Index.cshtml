@@ -1,0 +1,31 @@
+﻿<div data-ng-app="main" class="main-app loading">
+    <div class="logo-section">
+        <img class="image" src="~/Content/images/luksi-logo.png" />
+    </div>
+
+    <div class="loading-section loading-icon overlay">
+        <i class="icon-spinner icon-spin"></i>
+    </div>
+
+    <div data-ng-controller="route-controller">
+        <div class="menu-section">
+            <span class="item" data-ng-class="{selected: route === '/game'}" data-ng-click="setRoute('/game')">Game</span>
+            <span class="item" data-ng-class="{selected: route === '/blog'}" data-ng-click="setRoute('/blog')">Blog</span>
+            <span class="item" data-ng-class="{selected: route === '/missions'}" data-ng-click="setRoute('/missions')">Missions</span>
+            <span class="item" data-ng-class="{selected: route === '/subscribe'}" data-ng-click="setRoute('/subscribe')">Subscribe</span>
+            <span class="item" data-ng-class="{selected: route === '/contact'}" data-ng-click="setRoute('/contact')">Contact</span>
+        </div>
+
+        <div class="body-section overlay-container" data-ng-switch="route">
+            <div class="overlay fade-animation" data-ng-switch-when="/game">@Html.Partial("game-module")</div>
+            <div class="overlay fade-animation" data-ng-switch-when="/blog">@Html.Partial("blog-module")</div>
+            <div class="overlay fade-animation" data-ng-switch-when="/missions">@Html.Partial("missions-module")</div>
+            <div class="overlay fade-animation" data-ng-switch-when="/subscribe">@Html.Partial("subscribe-module")</div>
+            <div class="overlay fade-animation" data-ng-switch-when="/contact">@Html.Partial("contact-module")</div>
+            <div class="notFound-module overlay fade-animation" data-ng-switch-default>
+                <div class="icon"><i class="icon-warning-sign"></i></div>
+                <p>404 Not Found: The requested url '{{route}}' does not exist on this server.</p>
+            </div>
+        </div>
+    </div>
+</div>

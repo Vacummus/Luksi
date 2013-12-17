@@ -1,0 +1,18 @@
+﻿<div class="missions-module" data-ng-controller="mission-controller" data-ng-switch="displayType">
+    <div class="fade-animation" data-ng-switch-when="content">
+        <p>The following shows the missions for the development of Luksi. Only the next 3 months are planned.</p>
+
+        <div class="mission-list">
+            <div data-ng-repeat="mission in doneMissions" class="icon icon-check"> {{mission.name}}</div>
+            <div data-ng-repeat="mission in todoMissions" class="icon icon-check-empty"> {{mission.name}}</div>
+            <div class="icon icon-check-empty"> ???</div>
+            <div class="icon icon-check-empty"> Ship it!</div>
+        </div>
+    </div>
+    <p class="red-color fade-animation" data-ng-switch-when="error">
+        An error occurred trying to getting the missions from Trello. Please try again later or visit <a href="https://trello.com/b/Z6wOCeZ6/luksi-development">Luksi Trello Board</a> for latest missions.
+    </p>
+    <div class="loading-icon fade-animation" data-ng-switch-when="loading">
+        <i class="icon-spinner icon-spin"></i>
+    </div>
+</div>

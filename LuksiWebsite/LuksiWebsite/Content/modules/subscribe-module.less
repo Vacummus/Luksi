@@ -1,0 +1,42 @@
+﻿@import '../base/color';
+
+.subscribe-module {
+    text-align: center;
+    cursor: default;
+
+    .email {
+        margin-bottom: 20px;
+
+        .button {
+            border: solid 1px;
+            padding: 0 5px;
+            cursor: pointer;
+
+            &:hover {
+                color: @link-orange;
+            }
+        }
+
+        .input {
+            font-size: 20px;
+            width: 250px;
+        }
+    }
+
+    .tile {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        color: @link-blue;
+        padding: 0 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: @link-orange;
+        }
+
+        .icon {
+            font-size: 40px;
+        }
+    }
+}

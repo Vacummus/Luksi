@@ -1,0 +1,22 @@
+﻿.red-color {
+  color: #ff0000;
+}
+.green-color {
+  color: #008000;
+}
+.missions-module {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.missions-module .mission-list {
+  text-align: left;
+  display: inline-block;
+  width: 210px;
+}
+.missions-module .mission-list .icon {
+  display: block;
+  padding: 2px 0;
+}
+.missions-module .mission-list .icon-check {
+  color: #008000;
+}

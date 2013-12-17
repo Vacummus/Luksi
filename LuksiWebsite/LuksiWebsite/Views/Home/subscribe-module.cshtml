@@ -1,0 +1,25 @@
+﻿<div class="subscribe-module" data-ng-controller="subscribe-controller">
+    <p>Follow the development of Luksi.</p>
+
+    <div class="email">
+        <span class="label">Email: </span>
+        <input class="input" type="text" data-ng-model="email" />
+        <span class="button" data-ng-click="submitEmail()">Submit</span>
+    </div>
+
+    <p data-ng-show="subscribeSuccessful" class="green-color">Success! You have been added to our subscription list.</p>
+    <p data-ng-show="subscribeFailed" class="red-color">{{errorMessage}}</p>
+
+  @*  <a class="tile" href="https://www.facebook.com/GameLuksi">
+        <span class="icon-facebook icon"></span>
+        <div>Facebook</div>
+    </a>
+    <a class="tile" href="https://twitter.com/LuksiGame">
+        <span class="icon-twitter icon"></span>
+        <div>Twitter</div>
+    </a>*@
+  @*  <a class="tile" href="https://plus.google.com/b/106331466416205694335/106331466416205694335">
+        <span class="icon-google-plus icon"></span>
+        <div>Google+</div>
+    </a>*@
+</div>
